@@ -15,9 +15,10 @@ if(plazo <= 0 || plazo >=13){
     }
 
 
-
 while(plazo > 0 && plazo <=12){
     simuladorPlazoFijo();
-    break; 
+    cantidadInvertir = Number(prompt("Ingrese la cantidad que desea poner en plazo fijo"));
+    plazo = Number(prompt("Ingrese los meses que desea poner el plazo fijo entre 1 y 12 meses"));
+
 }
 
