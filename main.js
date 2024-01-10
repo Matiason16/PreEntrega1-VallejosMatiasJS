@@ -5,14 +5,19 @@ const interesMensual = 8;
 let resultado = 0;
 
 
+function simuladorPlazoFijo(){
+    resultado = cantidadInvertir + interesMensual/100*cantidadInvertir * plazo;
+    alert("Cantidad a obtener con intereses" + " " + resultado);
+}
 
 if(plazo <= 0 || plazo >=13){
     alert("Plazo ingresado fuera de los limites");
     }
 
+
+
 while(plazo > 0 && plazo <=12){
-    resultado = cantidadInvertir + interesMensual/100*cantidadInvertir * plazo;
-    alert("Cantidad a obtener con intereses" + " " + resultado);
+    simuladorPlazoFijo();
     break; 
 }
 
