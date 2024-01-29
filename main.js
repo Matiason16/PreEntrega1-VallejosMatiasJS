@@ -1,24 +1,79 @@
-//Simulador de Plazo fijo
-let cantidadInvertir = Number(prompt("Ingrese la cantidad que desea poner en plazo fijo"));
-let plazo = Number(prompt("Ingrese los meses que desea poner el plazo fijo entre 1 y 12 meses"));
-const interesMensual = 8;
-let resultado = 0;
+const usuarios = [
+    { nombre: 'juan', edad: 25 }
+];
 
 
-function simuladorPlazoFijo(){
-    resultado = cantidadInvertir + interesMensual/100*cantidadInvertir * plazo;
-    alert("Cantidad a obtener con intereses" + " " + resultado);
+
+
+
+usuarios.forEach(usuario => {
+alert(`Usuario:${usuario.nombre} Edad:${usuario.edad}`);
+});
+
+
+
+
+
+
+
+const nombre = prompt("¿Quién eres?").toLowerCase();
+if (nombre) {
+const usuarioEncontrado = usuarios.find(usuario => usuario.nombre === nombre);
+
+if (usuarioEncontrado) {
+    alert(`Hola ${usuarioEncontrado.nombre}! Bienvenido.`);
+} else {
+    alert("Lo siento, no te encontré en la lista de usuarios.");
+}
 }
 
-if(plazo <= 0 || plazo >=13){
-    alert("Plazo ingresado fuera de los limites");
-    }
 
 
-while(plazo > 0 && plazo <=12){
-    simuladorPlazoFijo();
-    cantidadInvertir = Number(prompt("Ingrese la cantidad que desea poner en plazo fijo"));
-    plazo = Number(prompt("Ingrese los meses que desea poner el plazo fijo entre 1 y 12 meses"));
 
+
+
+const seleccionInvertir = prompt("¿En qué quieres invertir? (Plazo fijo, Dolares)").toLowerCase();
+
+
+
+
+if (seleccionInvertir === "plazo fijo") {
+calcularPlazoFijo();
+}
+if(seleccionInvertir ==="dolares" || seleccionInvertir ==="dólares"){
+ convertirADolares();
+}else {
+alert("Su selección no existe");
 }
 
+
+
+
+// Simulador de Plazo fijo
+function calcularPlazoFijo() {
+while (true) {
+const cantidadInvertir = Number(prompt("Ingrese la cantidad que desea poner en plazo fijo"));
+const plazo = Number(prompt("Ingrese los meses que desea poner el plazo fijo entre 1 y 12 meses"));
+
+if (plazo <= 0 || plazo >= 13) {
+  alert("Plazo ingresado fuera de los límites");
+  continue;
+}
+const interesMensual = 8 / 100;
+const resultado = cantidadInvertir + interesMensual * cantidadInvertir * plazo;
+alert(`Cantidad a obtener con intereses: ${resultado}`);
+const repetir = prompt("¿Desea calcular otro plazo fijo? (Sí/No)").toLowerCase();
+if (repetir !== "sí" && repetir !== "si") {
+  break;
+}
+}
+}
+
+
+//Compra de Dolares
+function convertirADolares(){
+    const tasaDeCambio = 1000;
+    const cantidadMonedaLocal = Number(prompt("Ingrese la cantidad de dinero que desea convertir a dólares:"));
+    const cantidadDolares = cantidadMonedaLocal / tasaDeCambio;
+    alert(`Usted compró ${cantidadDolares.toFixed(2)} dólares.`);
+};
