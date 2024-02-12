@@ -1,13 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/estilos.css">
 </head>
 <body>
-    <script src="main.js"></script>
-
+    <header>
+      <h1>E commerce</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Carrito</a></li>
+        </ul>
+      </nav>
+    </header>
     
+    <h2>Productos Disponibles</h2>
+    <div class="container">
+        <h1>Productos</h1>
+        <div class="productos">
+          <div class="producto">
+            <img src="./multi/monitor.jpg" alt="Monitor" width="300px">
+            <p>Monitor - $215.000</p>
+            <button onclick="agregarAlCarrito('Producto 1', 215000)">Agregar al Carrito</button>
+          </div>
+          <!-- Más productos aquí -->
+        </div>
+      
+        <h1>Carrito de Compras</h1>
+        <div id="carrito" class="carrito">
+          <p>No hay productos en el carrito.</p>
+        </div>
+      </div>
+      
+
+    <main>
+      <!-- Contenido principal, como productos, categorías, etc. -->
+    </main>
+    
+    
+    
+    
+<script src="./js/main.js"></script>
 </body>
 </html>
