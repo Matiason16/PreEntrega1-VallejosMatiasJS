@@ -1,44 +1,82 @@
 /* Estilos para el encabezado y la navegación */
+*{
+  font-family:Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/*BARRA DE NAVEGACION*/
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+    background-color: #ffffff;
+    padding: 28px;
   }
-  
+
+  .logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 60px; /* Ajusta el margen entre la imagen y el texto según tus necesidades */
+  }
+
   nav ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
   }
   
   nav ul li {
     display: inline;
-    margin-right: 20px;
   }
   
   nav ul li a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
+    padding: 10px 20px;
+    font-size: 13px;
   }
 
 
-  .container {
+
+
+  /*PRODUCTOS*/
+  .containerr {
     max-width: 800px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-gap: 20px;
   }
   
   .productos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr; /* Una sola columna */
+    grid-gap: 20px;
   }
   
   .producto {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
+    border-radius: 15px;
   }
-  
+
+  .producto:hover{
+    border: 1px solid #000000;
+  } 
+  .buton{
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 20px;
+    width: 300px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .buton:hover{
+    background-color: rgb(238, 55, 55)
+
+  }
+
+  /*CARRITO*/
   .carrito {
     margin-top: 20px;
     border: 1px solid #ccc;
@@ -53,3 +91,70 @@ header {
     align-items: center;
   }
   
+  .boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #fff; 
+    border: none;
+    border-radius: 1px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+  }
+  
+  .boton:hover {
+    background-color: rgb(238, 55, 55); 
+  }
+
+#eliminar{
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+  padding: 10px;
+}
+
+#eliminar:hover{
+  background-color: rgb(238, 55, 55); 
+}
+
+
+#total{
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+
+
+/*CARRUSEL*/
+  .slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+  padding-left: 30px;
+}
+
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+.slide{
+  padding-left: 65px;
+}
+
+
+
+

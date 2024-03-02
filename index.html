@@ -8,39 +8,49 @@
 </head>
 <body>
     <header>
-      <h1>E commerce</h1>
       <nav>
         <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Productos</a></li>
-          <li><a href="#">Carrito</a></li>
+          <li>
+          <div class="logo">
+            <img src="./multi/images.png" width="120px">
+          </div>
+        </li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="./pages/productos.html">Productos</a></li>
+
         </ul>
       </nav>
     </header>
  
-    <div class="container">
-        <h1>Productos</h1>
-        <div class="productos">
-          <div class="producto">
-            <img src="./multi/monitor.jpg" alt="Monitor" width="300px">
-            <p>Monitor - $215.000</p>
-            <button id="botonproducto">Agregar al Carrito</button>
-          </div>
-
-          <!--Agregar más productos-->
-
-        </div>
-      
-        <h1>Carrito de Compras</h1>
-        <div id="carrito" class="carrito">
-          <p>No hay productos en el carrito.</p>
-        </div>
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <video autoplay>
+          <source src="./multi/samsung.webm" type="video/webm">
+          </video>
       </div>
-      
+    
+      <div class="mySlides slide">
+        <img  src="./multi/imagensamsung.webp">
+      </div>
+    
+      <div class="mySlides slide">
+        <img  src="./multi/samsung2.webp">
+      </div>
+    </div>
+    
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
 
-    <main>
-      <!-- Contenido principal, como productos, categorías, etc. -->
-    </main>
+    <section>
+     
+  
+
+    
     
     
 <script src="./js/main.js"></script>
