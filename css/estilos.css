@@ -10,14 +10,19 @@
 /*BARRA DE NAVEGACION*/
 header {
     background-color: #ffffff;
-    padding: 28px;
+    padding: 26px;
+    border: 1px solid rgb(198, 198, 198);
+  }
+  header:hover{
+    border: 1px solid gold;
   }
 
   .logo {
     display: inline-block;
     vertical-align: middle;
-    margin-right: 60px; /* Ajusta el margen entre la imagen y el texto según tus necesidades */
+    margin-right: 50px;
   }
+
 
   nav ul {
     list-style-type: none;
@@ -31,37 +36,32 @@ header {
     color: #000000;
     text-decoration: none;
     padding: 10px 20px;
-    font-size: 13px;
+    font-size: 15px;
   }
 
 
 
 
   /*PRODUCTOS*/
-  .containerr {
-    max-width: 800px;
-    margin: 0 auto;
+  .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 20px;
-  }
-  
-  .productos {
-    display: grid;
-    grid-template-columns: 1fr; /* Una sola columna */
-    grid-gap: 20px;
-  }
-  
-  .producto {
+    padding-top: 10px;
+
+}
+
+.producto {
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
-    border-radius: 15px;
-  }
+}
+
 
   .producto:hover{
     border: 1px solid #000000;
   } 
+  
   .buton{
     background-color: #000000;
     color: #ffffff;
@@ -75,6 +75,7 @@ header {
     background-color: rgb(238, 55, 55)
 
   }
+  
 
   /*CARRITO*/
   .carrito {
@@ -90,19 +91,33 @@ header {
     justify-content: space-between;
     align-items: center;
   }
-  
+
   .boton {
-    display: inline-block;
-    padding: 10px 20px;
     background-color: #000000;
     color: #fff; 
     border: none;
-    border-radius: 1px; 
     cursor: pointer; 
     transition: background-color 0.3s ease; 
+    padding: 8px;
+    width: 500px;
+  }
+  
+
+  .boton1 {
+    background-color: #000000;
+    color: #fff; 
+    border: none;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    padding: 10px;  
+    font-size: 18px;
   }
   
   .boton:hover {
+    background-color: rgb(238, 55, 55); 
+  }
+    
+  .boton1:hover {
     background-color: rgb(238, 55, 55); 
   }
 

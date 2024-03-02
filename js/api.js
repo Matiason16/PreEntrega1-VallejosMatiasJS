@@ -1,27 +1,23 @@
-
- fetch('../datos.json')
+fetch('../datos.json')
     .then(response => response.json())
-    .then(data => {
-        console.log('Datos cargados:', data);
-        mostrarDatos(data);
-    })
-    .catch(error => {
-        console.error('Error al cargar los datos:', error);
-    });
+    .then(productos => {
 
+        const contenedorProductos = document.getElementById('contenedorProductos');
 
-
-function mostrarDatos(data) {
-    const datosContainer = document.getElementById('container');
-    datosContainer.innerHTML = `
-    <div class="productos">
-    <div class="producto">
-      <img src="../multi/monitor.jpg" alt="Monitor" width="300px">
-      <h3> ${data.nombre}</h3>
-      <h2>${data.precio}</h2>
-      <button id="botonproducto" class="buton">Agregar al Carrito</button>
-    </div>
-    
       
-    `;
-}
+        productos.forEach(producto => {
+
+            const productoDiv = document.createElement('div');
+            productoDiv.classList.add('productos');
+
+            const productoHTML = `
+                <div class="producto">
+                    <img src="${producto.imagen}" alt="${producto.nombre}" width="300px">
+                    <h3>${producto.nombre}</h3>
+                    <h2>${producto.precio}</h2> 
+                </div>
+            `;
+            productoDiv.innerHTML = productoHTML;
+            contenedorProductos.appendChild(productoDiv);
+        });
+    })

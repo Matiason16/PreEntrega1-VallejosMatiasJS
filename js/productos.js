@@ -1,14 +1,3 @@
-fetch('../datos.json')
-.then(response => response.json())
-.then(data => {
-    console.log('Datos cargados:', data);
-    mostrarDatos(data);
-})
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", function() {
     let carrito = document.getElementById("carrito");
   
@@ -25,62 +14,59 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     
     });
+
     let botonProducto2 = document.getElementById("botonproducto2");
     botonProducto2.addEventListener("click", function() {
-      agregarAlCarrito("Producto 2", 350000);
+      agregarAlCarrito("Smart TV Samsung", 350000);
       Swal.fire({
         position: "top-end",
         icon: "success",
         title: "Producto Agregado Al Carrito",
         showConfirmButton: false,
-        timer: 1500
+        timer: 1000
       });
     
     });
 
     let botonProducto3 = document.getElementById("botonproducto3");
     botonProducto3.addEventListener("click", function() {
-      agregarAlCarrito("Producto 3", 200000);
+      agregarAlCarrito("Aire Acondicionado Samsung", 200000);
       Swal.fire({
         position: "top-end",
         icon: "success",
         title: "Producto Agregado Al Carrito",
         showConfirmButton: false,
-        timer: 1500
+        timer: 1000
       });
-    
     });
+
 
     let botonProducto4 = document.getElementById("botonproducto4");
     botonProducto4.addEventListener("click", function() {
-      agregarAlCarrito("Producto 4", 400000);
+      agregarAlCarrito("Celular Samsung Galaxy S22", 400000);
       Swal.fire({
         position: "top-end",
         icon: "success",
         title: "Producto Agregado Al Carrito",
         showConfirmButton: false,
-        timer: 1500
+        timer: 1000
       });
-    
     });
 
 
 
-    
-    // Verificar si hay productos en el carrito al cargar la página
+
     if (carrito.children.length === 0) {
       let textoCarritoVacio = document.createTextNode("No hay productos en el carrito.");
       carrito.appendChild(textoCarritoVacio);
     } else {
-      // Si hay productos en el carrito, cargarlos desde localStorage
       cargarProductosDelLocalStorage();
     }
   });
   
+  
   function agregarAlCarrito(nombre, precio) {
     let carrito = document.getElementById("carrito");
-
-    // Eliminar el texto de "No hay productos en el carrito"
     if (carrito.children.length === 1) {
       carrito.removeChild(carrito.firstChild);
     }
@@ -96,9 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
       <button id="eliminar" onclick="eliminarDelCarrito(this)">Eliminar</button>
     `;
     carrito.appendChild(producto);
-    // Calcular el total del carrito después de agregar el producto
     calcularTotal();
-    // Guardar los productos del carrito en localStorage
     guardarProductosEnLocalStorage();
   }
   
@@ -107,7 +91,6 @@ document.addEventListener("DOMContentLoaded", function() {
   function eliminarDelCarrito(boton) {
     
     let producto = boton.parentElement;
-    
     Swal.fire({
       title: "¿Estás seguro de eliminar el producto?",
       icon: "warning",
@@ -132,7 +115,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let carrito = document.getElementById("carrito");
   
-    // Verificar si quedan productos en el carrito después de eliminar uno
     if (carrito.children.length === 0) {
       let textoCarritoVacio = document.createTextNode("No hay productos en el carrito.");
       carrito.appendChild(textoCarritoVacio);

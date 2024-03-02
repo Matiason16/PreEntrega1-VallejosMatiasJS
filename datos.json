@@ -1,22 +1,26 @@
 [
 {
-    "nombre": "Smart TV Samsung",
-    "precio": 215000
+    "nombre": "Monitor TV Samsungg",
+    "precio": "$215.000",
+    "imagen": "../multi/monitor.jpg"
   },
 
   {
     "nombre": "Smart TV Samsung",
-    "precio": 215000
+    "precio": "$350.000",
+    "imagen": "../multi/smarttv.jpg"
   },
 
   
   {
-    "nombre": "Smart TV Samsung",
-    "precio": 215000
+    "nombre": "Aire Acondicionado Samsung",
+    "precio": "$200.000",
+    "imagen": "../multi/aireac.jpg"
   },
   
   {
-    "nombre": "Smart TV Samsung",
-    "precio": 215000
+    "nombre": "Celular Samsung Galaxy S22",
+    "precio": "$400.000",
+    "imagen": "../multi/s22.jpg"
   }
 ]
